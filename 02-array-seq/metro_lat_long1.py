@@ -48,11 +48,16 @@ print(delhi._asdict())
 for key, value in delhi._asdict().items():
     print(key + ':', value)
 
-
-
-
-
-
+print('-'*50)
+#排序
+#list.sort()和sorted()
+fruits = ['grape', 'raspberry', 'apple','banana']
+print(sorted(fruits))                #['apple', 'banana', 'grape', 'raspberry']
+print(sorted(fruits, reverse=True))  #['raspberry', 'grape', 'banana', 'apple']
+print(sorted(fruits, key=len))       #['grape', 'apple', 'banana', 'raspberry']  key函数为len函数，作用于序列每一个元素，根据元素的长度排序，grape和apple长度一样，所以排序后相对位置与原来一样
+print(sorted(fruits, key=len, reverse=True))  #['raspberry', 'banana', 'grape', 'apple']   加上关键字参数，同样一个道理，grape和apple的相对位置依然不会改变
+fruits.sort()
+print(fruits)                           #['apple', 'banana', 'grape', 'raspberry']
 ######
 #####
 #知识点总结：

@@ -54,6 +54,6 @@ for card in sorted(deck, key=spades_high):
     # def __getitem__(self,position):这个内置函数的实现，可以实现deck[0]选择，0就是position
     # 关键字创建dict:dict(x=1,y=2) =>{'x':1,'y':2}
     # list.index(item)实现已知元素，求元素对应的索引
-    # sorted函数接收一个key函数，根据函数返回值进行排序
+    # sorted函数接收一个key函数，根据函数返回值进行排序（key函数会被作用于序列中的每一个元素上，并根据函数返回值排序）
     # sorted(dect, key=spades_high)，将deck中的元素，传入函数spades_high,根据返回值映射位置排序
     # sorted()函数按照传入的key函数返回值进行返回值的排序，每一个返回值又对应相应的元素，按照对应关系返回排序后的dect

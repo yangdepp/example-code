@@ -7,11 +7,13 @@ NEEDLES = [0, 1, 2, 5, 8, 10, 22, 23, 29, 30, 31]
 
 ROW_FMT = '{0:2d} @ {1:2d}    {2}{0:<2d}'
 
+
 def demo(bisect_fn):
     for needle in reversed(NEEDLES):
         position = bisect_fn(HAYSTACK, needle)  # <1>
         offset = position * '  |'  # <2>
         print(ROW_FMT.format(needle, position, offset))  # <3>
+
 
 if __name__ == '__main__':
 
@@ -25,3 +27,15 @@ if __name__ == '__main__':
     demo(bisect_fn)
 
 # END BISECT_DEMO
+print('-' * 50)
+
+
+# join()方法
+str1 = '-'
+list1 = list(range(10))
+print(str1.join('%d' % n for n in list1))
+
+#test2
+str2 = '-'
+seq = ['a','b','c']
+print(str2.join(seq))
