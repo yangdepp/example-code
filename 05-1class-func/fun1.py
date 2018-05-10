@@ -23,3 +23,10 @@ print(map(factorial, range(11)))      #map函数将range(11)中可迭代的每�
 #生成器   generator   把列表生成式的[]换成()，就创建了一个generator
 #迭代器    生成器不但可以作用于for循环，还可以被next()函数不断调用并返回下一个值。
 #可以被next()函数调用并不断返回下一个值的对象称为迭代器：Iterator
+
+#创建押韵单词，可以把单词反过来然后排序
+def reverse(word):
+    return word[::-1]
+
+fruits = ['strawberry', 'fig', 'apple', 'cherry', 'raspberry', 'banana']
+print(sorted(fruits, key=reverse))
