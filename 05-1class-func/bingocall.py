@@ -33,3 +33,7 @@ class BingoCage:
         return self.pick()
 
 # END BINGO
+bingo = BingoCage(range(3))
+print(bingo.pick())
+print(bingo())
+print(callable(bingo))
