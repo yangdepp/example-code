@@ -37,8 +37,22 @@ def tag(name, *content, cls=None, **attrs):
     else:
         attr_str = ''
     if content:
-        return '\n'.join('<%s%s>%s</%s>' %
-                         (name, attr_str, c, name) for c in content)
+        return '\n'.join('<%s%s>%s</%s>' % (name, attr_str, c, name) for c in content)
     else:
         return '<%s%s />' % (name, attr_str)
 # END TAG_FUNC
+print(tag('br'))
+print(tag('p','hello'))
+print(tag('p','hello','world'))
+print(tag('p', 'hello', id=33))
+print(tag('p', 'hello', 'world', cls='sidebar'))
+print(tag(content='testing', name="img"))
+my_tag = {'name': 'img', 'title': 'Sunset Boulevard','src': 'sunset.jpg', 'cls': 'framed'}
+print(tag(**my_tag))
+
+
+
+print('-'*50)
+aaa = ('hello',)
+for i in aaa:
+    print(i)

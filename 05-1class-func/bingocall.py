@@ -32,8 +32,11 @@ class BingoCage:
     def __call__(self):  # <5>
         return self.pick()
 
+#任何函数是真正的对象，任何python对象都可以表现得像函数，，只需要实现实例方法__call__
+#实现__call__方法的类是创建函数类对象的简便方式
 # END BINGO
 bingo = BingoCage(range(3))
+print(bingo._items)
 print(bingo.pick())
 print(bingo())
 print(callable(bingo))
