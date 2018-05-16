@@ -41,16 +41,17 @@ def tag(name, *content, cls=None, **attrs):
     else:
         return '<%s%s />' % (name, attr_str)
 # END TAG_FUNC
-print(tag('br'))
-print(tag('p','hello'))
-print(tag('p','hello','world'))
-print(tag('p', 'hello', id=33))
-print(tag('p', 'hello', 'world', cls='sidebar'))
-print(tag(content='testing', name="img"))
+print(tag('br'))                        #【name='br', content = (), cls = None, attrs = {}】
+print(tag('p','hello'))                 #【name='p', content = ('hello',), cls = None, attrs = {}】
+print(tag('p','hello','world'))         #【name='p', content = ('hello','world'), cls = None, attrs = {}】
+print(tag('p', 'hello', id=33))         #【name='p', content = ('hello','world'), cls = None, attrs = {'id':33}】
+print(tag('p', 'hello', 'world', cls='sidebar'))  #【name='img', content = (), cls = 'sidebar', attrs = {}】
+print(tag(content='testing', name="img"))         #【name='img', content = (), cls = None, attrs = {'content':'testing'}】
 my_tag = {'name': 'img', 'title': 'Sunset Boulevard','src': 'sunset.jpg', 'cls': 'framed'}
 print(tag(**my_tag))
 
-
+#可变参数传入的是一个拼接好的tuple
+#关键字参数传入的是一个dict
 
 print('-'*50)
 aaa = ('hello',)
